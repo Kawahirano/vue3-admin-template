@@ -3,7 +3,6 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 
-
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {files: ["**/*.{js,mjs,cjs,ts,vue}"]},
@@ -14,6 +13,8 @@ export default [
   {files: ["**/*.vue"], languageOptions: {parserOptions: {parser: tseslint.parser}}},
   {
     ignores: ["dist","node_modules"],
+  },
+  {
     rules:{
           // eslint（https://eslint.bootcss.com/docs/rules/）
     'no-var': 'error', // 要求使用 let 或 const 而不是 var
